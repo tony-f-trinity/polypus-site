@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Polypus",
+			"path": "."
+		},
+		{
+			"name": "tempocontinuum",
+			"path": "../tempocontinuum"
+		}
+	],
+	"settings": {}
+}

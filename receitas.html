@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Custo e nutrição de receitas | Polypus</title>
+
+<meta name="description" content="Cadastre alimentos com preço e tabela nutricional e calcule o custo e a nutrição das suas receitas.">
+<link rel="icon" href="assets/polypus.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;display=swap">
+<link rel="stylesheet" href="css/polypus.css">
+<link rel="stylesheet" href="css/receitas.css">
+<link rel="modulepreload" href="wasm/receitas.js">
+<script>try{var t=localStorage.getItem('pp-tema');if(t==='escuro'||t==='claro')document.documentElement.setAttribute('data-theme',t==='escuro'?'dark':'light')}catch(e){}</script>
+</head>
+<body>
+<header class="topo">
+  <div class="wrap topo-linha">
+    <a class="logo" href="index.html" aria-label="Polypus, início">
+        <span class="logo-marca" aria-hidden="true"></span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+        <a href="index.html">Início</a>
+        <a href="ferramentas.html" aria-current="page">Ferramentas</a>
+        <a href="projetos.html">Projetos</a>
+    </nav>
+    <button type="button" class="bt-pilula bt-tema" data-tema aria-label="Mudar o tema">
+      <span class="so-claro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg></span><span class="so-escuro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span>
+      <span class="tema-txt"><span class="so-claro">Escuro</span><span class="so-escuro">Claro</span></span>
+    </button>
+    <button type="button" class="bt-pilula bt-menu" data-menu aria-expanded="false" aria-controls="pp-painel">
+      <svg class="ic-abrir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="ic-fechar" hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      Menu
+    </button>
+  </div>
+  <nav id="pp-painel" class="painel" aria-label="Menu" hidden>
+        <a href="index.html">Início</a>
+        <a href="ferramentas.html" aria-current="page">Ferramentas</a>
+        <a href="projetos.html">Projetos</a>
+  </nav>
+</header>
+<main class="wrap interna">
+  <div class="cabeca-pagina">
+    <p class="trilha"><a href="index.html">Início</a> / <a href="ferramentas.html">Ferramentas</a> / Custo e nutrição de receitas</p>
+    <h1><span class="marca">Custo e nutrição</span> de receitas</h1>
+    <p>Cadastre o preço e a tabela nutricional dos alimentos que você usa. Monte a receita e veja na hora quanto ela custa, quanto custa cada porção e a informação nutricional final.</p>
+  </div>
+  <div id="rc-app">
+    <p class="rc-carregando">Carregando a calculadora…</p>
+    <noscript><p class="mudo">Ative o JavaScript do navegador para usar a calculadora.</p></noscript>
+  </div>
+  <p class="rc-dica">Tudo fica salvo só neste navegador. Use <strong>Exportar</strong> para guardar uma cópia ou levar para outro aparelho. Os cálculos rodam em Rust, compilado para WebAssembly.</p>
+</main>
+<dialog id="rc-dialogo" class="rc-dialogo" aria-label="Alimento"></dialog>
+<footer class="rodape">
+  <div class="wrap rodape-dentro">
+    <div class="rodape-marca">
+      <p class="nome">Polypus</p>
+      <p class="lema"><span class="marca">Muitos braços, um só corpo.</span></p>
+      <p class="sobre">Ferramentas que construímos e projetos em que trabalhamos, reunidos num só lugar.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <a href="index.html">Início</a>
+      <a href="ferramentas.html">Ferramentas</a>
+      <a href="projetos.html">Projetos</a>
+    </nav>
+  </div>
+  <div class="wrap"><div class="rodape-base">© 2026 Polypus</div></div>
+</footer>
+<script src="js/dados.js"></script>
+<script src="js/polypus.js"></script>
+<script type="module" src="js/receitas.js"></script>
+</body>
+</html>
